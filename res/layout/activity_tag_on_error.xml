@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TagOnErrorActivity" >
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp" 
+        android:spinnerMode="dialog"
+        android:prompt="@string/transit_options_prompt"
+        android:entries="@array/transit_options_array"/>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner1"       
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp" 
+        android:spinnerMode="dialog"
+        android:prompt="@string/destination_options_prompt"
+        android:entries="@array/destination_options_array" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20sp" 
+        android:layout_alignRight="@+id/spinner2"
+        android:text="Continue" />
+
+    <TextView
+        android:id="@+id/manual_fare_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner2"
+        android:layout_below="@+id/spinner2"
+        android:layout_marginTop="62dp"
+        android:text="@string/manual_fare_payment_message"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TagOnActivity" >
+
+    <TextView
+        android:id="@+id/tagOnCurrentStationDetailsHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_station_details_header" 
+        android:gravity="center"
+        android:textSize="15sp" />
+    
+    <TextView
+        android:id="@+id/tagOnCurrentStationDetails"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tagOnCurrentStationDetailsHeader"
+        android:text="@string/current_station_details" 
+        android:gravity="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/tag_on_completed_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tag_on_error_button"
+        android:padding="0sp"
+        android:text="@string/tag_on_completed_message"
+        />
+
+    <Button
+        android:id="@+id/tag_on_error_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="0sp"
+        android:text="@string/tag_on_error_message" />
+
+    <TextView
+        android:id="@+id/tagOnMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tag_on_completed_button"
+        android:layout_alignLeft="@+id/tag_on_completed_button"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="@string/tag_on_message"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/clipper_card_reader_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tagOnMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/tag_on_message"
+        android:src="@drawable/clipper_card_reader" />
+
+</RelativeLayout>

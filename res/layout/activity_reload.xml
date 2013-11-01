@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ReloadActivity" >
+
+    <TextView
+        android:id="@+id/card_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/card_account"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/card_account_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/card_account_balance"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/card_account_last_updated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_account_balance"
+        android:layout_centerHorizontal="true"
+        android:text="@string/card_account_balance_timestamp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/card_account_last_updated"
+        android:layout_marginTop="25dp"
+        android:text="@string/reload_amount_header"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/reload_amount_25"
+        android:layout_width="70sp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="15dp"
+        android:text="$25" />
+
+    <Button
+        android:id="@+id/reload_amount_50"
+        android:layout_width="70sp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/reload_amount_25"
+        android:layout_alignBaseline="@+id/reload_amount_25"
+        android:layout_alignBottom="@+id/reload_amount_25" 
+        android:text="$50" />
+
+    <Button
+        android:id="@+id/reload_amount_75"
+        android:layout_width="70sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/reload_amount_50"
+        android:layout_alignBottom="@+id/reload_amount_50"
+        android:layout_toRightOf="@+id/reload_amount_50"
+        android:text="$100" />
+
+    <Button
+        android:id="@+id/reload_amount_other"
+        android:layout_width="70sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/reload_amount_75"
+        android:layout_alignBottom="@+id/reload_amount_75"
+        android:layout_toRightOf="@+id/reload_amount_75"
+        android:text="Other" />
+    
+    <TextView
+        android:id="@+id/reload_payment_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/reload_amount_25"
+        android:layout_marginTop="25dp"
+        android:text="@string/reload_payment_header"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/payment_options_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reload_payment_header"
+        android:entries="@array/payment_options_array"
+        android:prompt="@string/payment_options_prompt" 
+        android:spinnerMode="dialog"/>
+    
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="44dp"
+        android:text="Continue" />
+
+    <EditText
+        android:id="@+id/account_info_edit_box"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/payment_options_spinner"
+        android:visibility="gone"
+        android:hint="Enter account information"
+        />
+
+</RelativeLayout>
