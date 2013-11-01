@@ -7,3 +7,4 @@ The prototype is aimed at users so that they can manage and use Clipper without 
 The application does NOT actually interact with any type of Clipper reader.
 
 
+Test line
